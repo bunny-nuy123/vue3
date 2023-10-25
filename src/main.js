@@ -1,5 +1,6 @@
 // 全局样式
-// import './assets/main.css'
+import '@/assets/todo/base.css'
+import '@/assets/todo/index.css'
 
 // create 函数创建一个应用实例
 import { createApp } from 'vue'

@@ -8,11 +8,19 @@
     <button @click="proxy2ChangeName"> 修改proxy2=>{{ proxy2.name  }}</button>
     <div>-----------------------</div>
     <button @click="changeName">{{ name }}</button>
+    <!-- 解包 -->
+    <div>{{ proxy3.num + 1}}</div>
+
+    <div>{{ proxy3.num }}</div>
+    <!--{{ proxy3.num }}结果 [object Object]1 -->
+    <div>{{ raw3.num + 1}}</div> 
+    <div>{{ raw3.num }}</div>
+    <div>{{ num + 100 }}</div>
   </div>
 </template>
 
 <script setup>
-import {reactive,shallowReactive,isReactive,isRef} from 'vue'
+import {reactive,shallowReactive,isReactive,isRef,ref} from 'vue'
 // Reactive 也是包装响应式对象
 // 接受的参数只能是 数组 对象 或者集合 Map, set
 // 基本数据类型Reactive 不支持 string,boolean,number
@@ -94,6 +102,15 @@ const test = (val)=>{
   console.log("isRef",isRef(val));//FALSE
 }
 test(proxy.name)
+
+// 解包  原始对象不会解包 
+const raw3 = {
+  num:ref(5)
+}
+// 结构原始对象
+const  {num} = raw3
+const   proxy3 = reactive(raw3)
+console.log(`output->`,proxy3.num)
 </script>
 
 <style scoped>
