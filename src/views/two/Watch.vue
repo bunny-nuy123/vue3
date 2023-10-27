@@ -108,7 +108,7 @@ const obj= reactive({
 
 
 //没有显示声明监听
-// 回调中用到水就监听谁
+// 回调中用到谁 就监听谁
 watchPostEffect(()=>{
   console.log(`output->val`,num.value)
   console.log(`output->obj`,obj.age)

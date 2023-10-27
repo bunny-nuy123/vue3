@@ -11,6 +11,7 @@
 import { onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onUnmounted,onBeforeUnmount,onActivated, onDeactivated } from 'vue'
 console.log(`子组件->setup......`)
 
+
 onBeforeMount(()=>{
  console.log(`子组件1 ->onBeforeMount.....`)
 })
@@ -34,5 +35,10 @@ onActivated(()=>{
 })
 onDeactivated(()=>{
   console.log(`子组件1 ->onDeactivated...`)
+})
+// 宏命令 defineExpose
+defineExpose({
+  msg,
+  fn
 })
 </script>

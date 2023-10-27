@@ -7,7 +7,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
-import router from './router'
+// import router from './router'
 
 // createApp 函数接受一个参数,这个参数是一个vue组件/模板
 // createApp 括号中的这个参数就叫做根组件
@@ -22,7 +22,7 @@ app.config.errorHandler = (err,instance,info)=>{
 }
 // use 使用资源 中间件
 app.use(createPinia())
-app.use(router)
+// app.use(router)
 
 
 

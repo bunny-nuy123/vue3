@@ -8,6 +8,8 @@ onActivated(()=>{
   console.log(`子组件2 ->OnActived`)
 
 })
+
+
 </script>
 <template>
   <div>

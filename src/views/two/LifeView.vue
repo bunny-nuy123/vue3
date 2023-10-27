@@ -4,11 +4,12 @@
     <div>{{ proxy }}</div>
     <button id="btn" @click="num++">{{ num }}</button>
     <button @click="doUnmouteComp">卸载组件</button>
-    <!-- <input type="radio" :value="ChildOne"  v-model="currentComp">ChildOne
+    <input type="radio" :value="ChildOne"  v-model="currentComp">ChildOne
     <input type="radio" :value="ChildTwo"  v-model="currentComp">ChildTwo
-     <KeepAlive>
+    <!-- 动态组件 -->
+    <KeepAlive>
      <component :is="currentComp"></component>
-     </KeepAlive> -->
+     </KeepAlive>
   </div>
 </template>
 <script setup>
