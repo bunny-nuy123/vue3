@@ -23,6 +23,7 @@
 // import ModelView from './views/three/ModelView.vue';
 import AttributesView from './views/three/AttributesView.vue';
 import SlotView from './views/three/SlotView.vue';
+import Review from './views/four/Review.vue';
 </script>
 
 <template>
@@ -43,7 +44,8 @@ import SlotView from './views/three/SlotView.vue';
 <!-- <OptionChildView></OptionChildView> -->
 <!-- <ModelView></ModelView> -->
 <!-- <AttributesView></AttributesView> -->
-<SlotView></SlotView>
+<!-- <SlotView></SlotView> -->
+<Review></Review>
 </template>
 
 <style >
