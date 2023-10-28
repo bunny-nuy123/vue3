@@ -17,7 +17,12 @@
 //   })
 // import watch from '@/views/two/watch.vue';
 // import AttrRefView from './views/two/AttrRefView.vue';
-import FatherView from './views/two/FatherView.vue';
+// import FatherView from './views/two/FatherView.vue';
+// import FatherView from './views/three/FatherView.vue';
+// import OptionChildView from './views/two/OptionChildView.vue';
+// import ModelView from './views/three/ModelView.vue';
+import AttributesView from './views/three/AttributesView.vue';
+import SlotView from './views/three/SlotView.vue';
 </script>
 
 <template>
@@ -34,7 +39,11 @@ import FatherView from './views/two/FatherView.vue';
 <!-- <LifeView></LifeView> -->
 <!-- <watch></watch> -->
 <!-- <AttrRefView></AttrRefView> -->
-<FatherView></FatherView>
+<!-- <FatherView></FatherView> -->
+<!-- <OptionChildView></OptionChildView> -->
+<!-- <ModelView></ModelView> -->
+<!-- <AttributesView></AttributesView> -->
+<SlotView></SlotView>
 </template>
 
 <style >

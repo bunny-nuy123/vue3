@@ -5,9 +5,10 @@
 // create 函数创建一个应用实例
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
 import App from './App.vue'
+import { registerComp } from './plugin'
 // import router from './router'
+
 
 // createApp 函数接受一个参数,这个参数是一个vue组件/模板
 // createApp 括号中的这个参数就叫做根组件
@@ -30,3 +31,12 @@ app.use(createPinia())
 // mount 方法一定在应用资源配置完成之后再调用,否则无效
 app.mount('#app')
 // app.mount(document.getElementById('app'))
+
+
+
+//全局注册子组件
+//app.component(组件名称,组件实例)
+// app.component('ChildTwo',ChildTwo)
+
+// registerComp(app)
+app.use(registerComp,{name:'zs',age:12})
