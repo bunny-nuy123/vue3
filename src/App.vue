@@ -23,7 +23,12 @@
 // import ModelView from './views/three/ModelView.vue';
 import AttributesView from './views/three/AttributesView.vue';
 import SlotView from './views/three/SlotView.vue';
-import Review from './views/four/Review.vue';
+
+import GrandView from './views/four/GrandView.vue';
+import AsyncView from './views/four/AsyncView.vue';
+import MouseViewVue from './views/four/MouseView.vue';
+import Directive from './views/four/Directive.vue';
+import PluginView from './views/four/PluginView.vue';
 </script>
 
 <template>
@@ -45,7 +50,12 @@ import Review from './views/four/Review.vue';
 <!-- <ModelView></ModelView> -->
 <!-- <AttributesView></AttributesView> -->
 <!-- <SlotView></SlotView> -->
-<Review></Review>
+
+<!-- <GrandView></GrandView> -->
+<!-- <AsyncView></AsyncView> -->
+<!-- <MouseViewVue></MouseViewVue> -->
+<!-- <Directive></Directive> -->
+<PluginView></PluginView>
 </template>
 
 <style >
