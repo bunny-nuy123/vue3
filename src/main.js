@@ -7,7 +7,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import { registerComp } from './plugin'
-// import router from './router'
+import router from './router'
 import {APP_MSG } from '@/constant/index.js'
 
 import i18n from './plugin/i18n'
@@ -24,7 +24,7 @@ app.config.errorHandler = (err,instance,info)=>{
 }
 // use 使用资源 中间件
 app.use(createPinia())
-// app.use(router)
+app.use(router)
 
 
 

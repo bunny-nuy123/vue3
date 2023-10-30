@@ -29,6 +29,9 @@ import AsyncView from './views/four/AsyncView.vue';
 import MouseViewVue from './views/four/MouseView.vue';
 import Directive from './views/four/Directive.vue';
 import PluginView from './views/four/PluginView.vue';
+import keepView from './views/five/keepView.vue';
+import teleportView from './views/five/teleportView.vue';
+import suspenseView from './views/five/suspenseView.vue';
 </script>
 
 <template>
@@ -55,7 +58,29 @@ import PluginView from './views/four/PluginView.vue';
 <!-- <AsyncView></AsyncView> -->
 <!-- <MouseViewVue></MouseViewVue> -->
 <!-- <Directive></Directive> -->
-<PluginView></PluginView>
+<!-- <PluginView></PluginView> -->
+<!-- <keepView></keepView> -->
+<!-- <teleportView></teleportView> -->
+<!-- <suspenseView></suspenseView> -->
+
+
+<!-- routerview 内置组件  -->
+<!-- 给routerview 加缓存 -->
+<RouterView v-slot="{Component,route}" >
+  <!-- <pre>route :  {{ route }}</pre> -->
+<keepAlive>
+ <component :is="Component"></component>
+</keepAlive>
+</RouterView>
+
+<!-- to 就是path 自定义routerlink不想要变成a标签就必须添加custom, v-slot可以结构出来router,href,navigate -->
+<RouterLink to="/about" custom v-slot="{router,href,navigate}">
+<!-- <pre>{{ slotProsp }}</pre> -->
+<!-- 想让about跳转 就需要绑定click 事件 href属性  循环遍历的时候就会用到-->
+<div @click="navigate" :href="href" style="color: blue;">about</div>
+</RouterLink>
+
+<RouterLink to="/" style="margin-left: 50px;">去首页 </RouterLink>
 </template>
 
 <style >
