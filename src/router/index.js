@@ -20,7 +20,12 @@ const constRoutes =  [
   //   // which is lazy-loaded when the route is visited.
   // 除了首页直接导入 其他都是懒加载导入 为了性能优化
     component: () => import('../views/five/AboutView.vue')
-  }
+  },
+  {
+    path: '/store',
+    name: 'Store',
+    component: () => import('../views/six/storeView.vue')
+  },
 ]
 
 

@@ -32,6 +32,7 @@ import PluginView from './views/four/PluginView.vue';
 import keepView from './views/five/keepView.vue';
 import teleportView from './views/five/teleportView.vue';
 import suspenseView from './views/five/suspenseView.vue';
+import storeView from './views/six/storeView.vue';
 </script>
 
 <template>
@@ -81,6 +82,7 @@ import suspenseView from './views/five/suspenseView.vue';
 </RouterLink>
 
 <RouterLink to="/" style="margin-left: 50px;">去首页 </RouterLink>
+<RouterLink to="/strore" style="margin-left: 50px;">strore</RouterLink>
 </template>
 
 <style >

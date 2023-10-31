@@ -4,7 +4,7 @@
 
 // create 函数创建一个应用实例
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+
 import App from './App.vue'
 import { registerComp } from './plugin'
 import router from './router'
@@ -12,6 +12,9 @@ import {APP_MSG } from '@/constant/index.js'
 
 import i18n from './plugin/i18n'
 import {en,zhCn } from '@/locale/index'
+
+// 导入pinia 
+import { createPinia } from 'pinia'
 // createApp 函数接受一个参数,这个参数是一个vue组件/模板
 // createApp 括号中的这个参数就叫做根组件
 const app = createApp(App)
@@ -23,9 +26,12 @@ app.config.errorHandler = (err,instance,info)=>{
   console.log(`app info->`,info)
 }
 // use 使用资源 中间件
-app.use(createPinia())
 app.use(router)
 
+// 创建 pinia实例
+// app.use(createPinia())
+ const pinia = createPinia()
+ app.use(pinia)
 
 
 // 使用插件
